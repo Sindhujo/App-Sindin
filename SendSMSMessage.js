@@ -1,4 +1,4 @@
-import { SMS } from "expo";
+import * as SMS from 'expo-sms'
 import { getContacts } from "./manageContacts";
 
 function parseContactObjectToArray(contactObject) {
