@@ -1,0 +1,42 @@
+New project setup:
+git init
+git config --global user.email "sindhujonnalagadda910@gmail.com"
+git config --global user.name "sindhujo"
+git remote add origin https://github.com/Sindhujo/test.git
+###################################################################
+To know existing git user and email::
+git config user.name
+git config user.email
+these two give the current username and email of the user.
+####################################################################
+
+git pull origin master
+git add .\hello.py
+git status(to check)
+git remote add origin master <>
+git commit -m "new file hello.py"
+git push --set-upstream origin master
+***after changes***
+git add <>
+git status(to check)
+git commit -m
+git push
+***Other git commands**
+git log
+git reset --hard
+Make sure nodejs is installed in your PC.
+npm i
+make sure package.json file exists
+npm start
+npm install -g expo-cli
+
+Reference links (yet to read):
+https://blog.expo.io/expo-for-professionals-218b7937fafb
+https://facebook.github.io/react-native/docs/linking-libraries-ios
+https://levelup.gitconnected.com/expo-vs-react-native-cli-a-guide-to-bootstrapping-new-react-native-apps-6f0fcafee58f
+https://proandroiddev.com/react-native-is-it-worth-it-part-i-398ec3fb9db7
+https://www.netguru.com/blog/react-native-pros-and-cons
+https://www.simform.com/react-native-limitations-app-development/
+https://www.freecodecamp.org/news/what-you-need-to-know-to-start-building-mobile-apps-in-react-native-dded951277b7/
+https://blog.bitsrc.io/10-reasons-to-use-react-native-for-mobile-app-development-4ceb06b0173a
+https://medium.com/reactbrasil/being-free-from-expo-in-react-native-apps-310034a3729
