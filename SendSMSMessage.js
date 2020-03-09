@@ -1,6 +1,11 @@
 import * as SMS from 'expo-sms'
+import { getCoordinates } from "./Geolocation";
 import { getContacts } from "./manageContacts";
 
+//import { getCoordinates } from "./Geolocation";
+
+ import React, { Component } from "react";
+ import { Alert, AsyncStorage } from "react-native";
 function parseContactObjectToArray(contactObject) {
   console.log(`This is the contactObject ${JSON.stringify(contactObject)}`);
 
@@ -28,15 +33,25 @@ function parseContactObjectToArray(contactObject) {
 async function sendMessage() {
   try {
     let contactObject = await getContacts();
+    let coords = await getCoordinates();
+    console.log(
+      'Coming into the sendMessage function, coordinates:',
+      coords
+      );
+   
+    
+   // let currentLatitude = parseCoordToArray(CoorObject.currentLatitude);
+    //let currentLongitude = parseCoordToArray(CoorObject.currentLongitude);
+
     console.log(
       `Coming into the sendMessage function, contacts: ${JSON.stringify(
         contactObject
       )}`
+
     );
     let contacts = parseContactObjectToArray(contactObject);
     const { result } = await SMS.sendSMSAsync(
-      contacts,
-      "Hi Friends! I'm about to go on a date! Yay! Here's my location: http://www.google.com/maps/place/43.034447,-87.911695"
+contacts,"www.google.com/maps/place/"+coords
     );
   } catch (e) {
     console.log(e);
